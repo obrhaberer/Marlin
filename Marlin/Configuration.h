@@ -1117,8 +1117,10 @@
 
 //#define UNKNOWN_Z_NO_RAISE // Don't raise Z (lower the bed) if Z is "unknown." For beds that fall when Z is powered off.
 
-//#define Z_HOMING_HEIGHT 4  // (mm) Minimal Z height before homing (G28) for Z clearance above the bed, clamps, ...
-// Be sure you have this distance over your Z_MAX_POS in case.
+#define Z_HOMING_HEIGHT 4 // (mm) Minimal Z height before homing (G28) for Z clearance above the bed, clamps, ... // +m
+// Be sure to have this much clearance over your Z_MAX_POS to prevent grinding.
+
+//#define Z_AFTER_HOMING  10      // (mm) Height to move to after homing Z
 
 // Direction of endstops when homing; 1=MAX, -1=MIN
 // :[-1,1]
@@ -1280,6 +1282,7 @@
 #define MESH_TEST_HOTEND_TEMP 205  // (°C) Default nozzle temperature for the G26 Mesh Validation Tool.
 #define MESH_TEST_BED_TEMP 60      // (°C) Default bed temperature for the G26 Mesh Validation Tool.
 #define G26_XY_FEEDRATE 20         // (mm/s) Feedrate for XY Moves for the G26 Mesh Validation Tool.
+#define G26_RETRACT_MULTIPLIER 1.0 // G26 Q (retraction) used by default between mesh test elements.
 #endif
 
 #endif
