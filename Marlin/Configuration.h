@@ -872,7 +872,7 @@
  *
  * Enable this option for a probe connected to the Z Min endstop pin.
  */
-// #define Z_MIN_PROBE_USES_Z_MIN_ENDSTOP_PIN // +m
+//#define Z_MIN_PROBE_USES_Z_MIN_ENDSTOP_PIN // +m
 
 /**
  * Z_MIN_PROBE_PIN
@@ -1179,12 +1179,12 @@
  * For other boards you may need to define FIL_RUNOUT_PIN, FIL_RUNOUT2_PIN, etc.
  * By default the firmware assumes HIGH=FILAMENT PRESENT.
  */
-//#define FILAMENT_RUNOUT_SENSOR // +m
+#define FILAMENT_RUNOUT_SENSOR // +m
 #if ENABLED(FILAMENT_RUNOUT_SENSOR)
 #define NUM_RUNOUT_SENSORS 1       // Number of sensors, up to one per extruder. Define a FIL_RUNOUT#_PIN for each.
 #define FIL_RUNOUT_INVERTING false // Set to true to invert the logic of the sensor.
-#define FIL_RUNOUT_PULLUP          // Use internal pullup for filament runout pins.
-//#define FIL_RUNOUT_PULLDOWN      // Use internal pulldown for filament runout pins.
+//#define FIL_RUNOUT_PULLUP          // Use internal pullup for filament runout pins.
+#define FIL_RUNOUT_PULLDOWN // +m     // Use internal pulldown for filament runout pins.
 
 // Set one or more commands to execute on filament runout.
 // (After 'M412 H' Marlin will ask the host to handle the process.)
@@ -1531,7 +1531,7 @@
  *    P1  Raise the nozzle always to Z-park height.
  *    P2  Raise the nozzle by Z-park amount, limited to Z_MAX_POS.
  */
-//#define NOZZLE_PARK_FEATURE
+#define NOZZLE_PARK_FEATURE // +m
 
 #if ENABLED(NOZZLE_PARK_FEATURE)
 // Specify a park position as { X, Y, Z_raise }

@@ -1869,7 +1869,7 @@
  * Requires NOZZLE_PARK_FEATURE.
  * This feature is required for the default FILAMENT_RUNOUT_SCRIPT.
  */
-//#define ADVANCED_PAUSE_FEATURE
+#define ADVANCED_PAUSE_FEATURE // +m
 #if ENABLED(ADVANCED_PAUSE_FEATURE)
 #define PAUSE_PARK_RETRACT_FEEDRATE 60       // (mm/s) Initial retract feedrate.
 #define PAUSE_PARK_RETRACT_LENGTH 2          // (mm) Initial retract. This short retract is done immediately, before parking the nozzle.
@@ -2330,7 +2330,7 @@
 #define X_STALL_SENSITIVITY 120 // +m
 #define X2_STALL_SENSITIVITY X_STALL_SENSITIVITY
 #define Y_STALL_SENSITIVITY 120 // +m
-//#define Z_STALL_SENSITIVITY 0  // +m
+//#define Z_STALL_SENSITIVITY 120  // +m
 //#define SPI_ENDSTOPS              // TMC2130 only
 //#define IMPROVE_HOMING_RELIABILITY
 #endif
